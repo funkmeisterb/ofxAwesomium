@@ -9,7 +9,12 @@
 #include "ofxAwesomium.h"
 
 // ----------------------------------------------------------------
-ofxAwesomium::~ofxAwesomium(){
+ofxAwesomium::ofxAwesomium() {
+	// Nothing?
+}
+
+// ----------------------------------------------------------------
+ofxAwesomium::~ofxAwesomium() {
 	web_view->Destroy();
 }
 
@@ -52,17 +57,17 @@ void ofxAwesomium::draw(float x, float y) {
 }
 
 // ----------------------------------------------------------------
-void ofxAwesomium::draw(float x, float y, float w, float h) {
+void ofxAwesomium::draw(float x, float y, float w, float h) const {
 	frame.draw(x, y, w, h);
 }
 
 // ----------------------------------------------------------------
-float ofxAwesomium::getHeight() {
+float ofxAwesomium::getHeight() const {
 	return frame.getHeight();
 }
 
 // ----------------------------------------------------------------
-float ofxAwesomium::getWidth() {
+float ofxAwesomium::getWidth() const {
 	return frame.getWidth();
 }
 

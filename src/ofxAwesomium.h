@@ -14,10 +14,10 @@
 
 using namespace Awesomium;
 
-class ofxAwesomium : public ofBaseDraws {
+class ofxAwesomium : public ofBaseDraws
+{
 public:
-
-	//ofxAwesomium();
+	ofxAwesomium();
 	~ofxAwesomium();
 	void setup(int width, int height);
 	void loadURL(string url);
@@ -36,7 +36,7 @@ public:
 	
 	// begin ofBaseDraws
 	void draw(float x, float y);
-	void draw(float x, float y, float w, float h);
+	void draw(float x, float y, float w, float h) const;
 	void draw(const ofPoint & point) {
 		draw(point.x, point.y);
 	}
@@ -46,8 +46,8 @@ public:
 	void draw(const ofPoint & point, float w, float h) {
 		draw(point.x, point.y, w, h);
 	}
-	float getHeight();
-	float getWidth();
+	float getHeight() const;
+	float getWidth() const;
 	// end ofBaseDraws
 	
 	ofImage frame;
